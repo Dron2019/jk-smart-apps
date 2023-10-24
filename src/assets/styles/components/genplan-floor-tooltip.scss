@@ -1,0 +1,116 @@
+.genplan-floor-tooltip {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 1000px;
+    background: var(--Orange, #FF6424);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s ease-in-out;
+    
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__digit {
+        color: var(--White, #FFF);
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 94%; /* 37.6px */
+        text-transform: uppercase;
+        text-transform: uppercase;
+    }
+    &__mob-link {
+        color: var(--Yellow, #D2C3B5);
+        font-family: $default-font; 
+        font-size: 14px;
+
+    }
+    &__text {
+        color: var(--White, #FFF);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    &__close {
+        display: none;
+    }
+}
+
+html:not(.desktop) {
+    .genplan-floor-tooltip {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        border-radius: 0px;
+        background: var(--Orange, #FF6424);
+        width: 274px;
+        padding: 20px;
+        height: auto;
+        color: var(--White, #FFF);
+        &__digit {
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 94%; /* 60.16px */
+            text-transform: uppercase;
+        }
+        &__close {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        &__text {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%; /* 18.2px */
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        &__title {
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 94%; /* 60.16px */
+        }
+        &__text,
+        &__digit {
+            color: var(--White, #FFF);
+        }
+        &__mob-link {
+            font-family: $default-font;
+            width: 100%;
+            border-radius: 0px;
+            background: var(--Blue, #404953);
+            color: var(--White, #FFF);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%; /* 18.2px */
+            text-decoration: none;
+            display: flex;
+            padding: 18px;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            gap: 10px;
+        }
+    }
+}

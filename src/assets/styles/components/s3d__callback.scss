@@ -1,0 +1,45 @@
+.s3d__callback {
+    --link-fz-flat: 16px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background: none;
+    border: none;
+    height: min-content;
+    font-family: $default-font, sans-serif;
+    font-weight: 500;
+    font-size: var(--link-fz-flat);
+    font-weight: 700;
+    line-height: 130%; /* 20.8px */
+    text-transform: uppercase;
+    color: var(--Blue, #404953);
+    cursor: pointer;
+    padding: 0;
+    text-transform: uppercase;
+    .s3d__callback-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: var(--size-btn-circle);
+        width: var(--size-btn-circle);
+        flex: 0 0 auto;
+        margin-right: 25px;
+        border-radius: 50%;
+        background: var(--Orange, #FF6424);
+        transition: background-color 0.4s ease-in-out;
+    }
+}
+
+html:not(.desktop) {
+    .s3d__callback  {
+        --link-fz-flat: 14px;
+        border: none;
+        .s3d__callback-icon {
+            margin-right: 20px; 
+        }
+        svg {
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
