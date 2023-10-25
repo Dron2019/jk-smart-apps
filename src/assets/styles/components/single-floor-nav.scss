@@ -78,5 +78,6 @@
 html:not(.desktop) {
     .s3d-floor__nav {
         --size-btn-circle: 48px;
+        margin-top: 0;
     }
 }
