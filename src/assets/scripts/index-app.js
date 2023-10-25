@@ -7,13 +7,15 @@ if (document.documentElement.classList.contains('desktop')) {
       const selfWidth = toolip.getBoundingClientRect().width;
       const text = toolip.querySelector('[data-genplan-tooltip-text]');
   
+      
       return function(evt, action) {
         action === 'off' ? 
         toolip.classList.remove('active') : 
         toolip.classList.add('active');
         const { y  } = evt.target.getBBox();
-        const { left  } = evt.target.getBoundingClientRect();
-        toolip.style.transform = `translate(${Math.max(left- selfWidth, 0)}px, ${y}px)`;
+        console.log(evt.target.getBoundingClientRect());
+        const { left, top  } = evt.target.getBoundingClientRect();
+        toolip.style.transform = `translate(${Math.max(left- toolip.getBoundingClientRect().width, 0)}px, ${top - toolip.getBoundingClientRect().width / 2}px)`;
         text.textContent = evt.target.dataset.floor;
       }
   
