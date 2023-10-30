@@ -1,5 +1,7 @@
 import 'current-device';
 
+import './modules/jumpToSiteForm';
+
 function handleTooltip(evt) {
     const infoItems = document.querySelectorAll('[data-info-flat]');
 

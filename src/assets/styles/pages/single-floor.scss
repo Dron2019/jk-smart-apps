@@ -24,6 +24,9 @@
         width: 100%;
         flex-grow: 1;
         max-height: 70vh;
+        @media screen and (max-height:650px) and (max-width: 1440px){
+            max-height: 40vh;
+        }
         polygon[data-id] {
             fill: rgba(255, 100, 36, 0.40);
             &.s3d-flat-active,
@@ -63,10 +66,12 @@
         display: flex;
         flex-wrap: wrap;
         &>img {
-            max-height: 70vh;
+            max-height: 50vh;
             object-fit: contain;
-            
+            width: 100%;
             cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
         }
         .s3d-floor__svg,
         .single-floor-title {
@@ -195,6 +200,9 @@
     letter-spacing: -0.84px;
     text-transform: uppercase;
     text-transform: uppercase;
+    @include to(1440px){
+        font-size: 32px;
+    }
     @include to(1024px){
             font-size: 32px;
     }

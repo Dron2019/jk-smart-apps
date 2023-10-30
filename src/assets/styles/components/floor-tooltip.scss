@@ -55,6 +55,12 @@ html:not(.desktop) {
             position: absolute;
             right: 20px;
             top: 20px;
+            [stroke] {
+                stroke: #fff;
+            }
+            [fill] {
+                fill: #fff;
+            }
         }
         &__title {
             display: block;

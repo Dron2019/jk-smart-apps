@@ -2,6 +2,8 @@ import 'current-device';
 import { useState } from './modules/helpers/helpers';
 import Popup from './modules/popup/PopupView';
 
+import './modules/jumpToSiteForm';
+
 
 
 const [ floorData, setFloorData, usefloorDataEffect ] = useState({});
@@ -130,15 +132,3 @@ document.body.addEventListener('click', (evt) => {
     if (document.querySelector('.vr-popup')) return;
     new Popup(target.getAttribute('src')).render();
 })
-
-
-
-document.body.addEventListener('click', (evt) => {
-    const target = evt.target.closest('[data-open-call-popup]');
-    if (!target) return;
-    document.querySelector('.conditions_form').scrollIntoView({ behavior: "smooth", });
-    setTimeout(() => {
-        document.querySelector('[id="name_conditions"]').focus()
-    }, 1000);
-})
-

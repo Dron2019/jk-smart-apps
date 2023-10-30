@@ -15,7 +15,7 @@ if (document.documentElement.classList.contains('desktop')) {
         const { y  } = evt.target.getBBox();
         console.log(evt.target.getBoundingClientRect());
         const { left, top  } = evt.target.getBoundingClientRect();
-        toolip.style.transform = `translate(${Math.max(left- toolip.getBoundingClientRect().width, 0)}px, ${top - toolip.getBoundingClientRect().width / 2}px)`;
+        toolip.style.transform = `translate(${Math.max(left- toolip.getBoundingClientRect().width, 0)}px, ${evt.clientY - toolip.getBoundingClientRect().width / 2}px)`;
         text.textContent = evt.target.dataset.floor;
       }
   
