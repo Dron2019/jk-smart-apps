@@ -61,6 +61,7 @@ document.body.addEventListener('click', (evt) => {
 function handleTooltip(params = {}) {
     const toolip = document.querySelector('.floor-tooltip');
     const selfWidth = toolip.getBoundingClientRect().width;
+    const selfHeight = toolip.getBoundingClientRect().height;
     const infoItems = document.querySelectorAll('[data-info-flat]');
     let state = 'off';
     
@@ -78,7 +79,7 @@ function handleTooltip(params = {}) {
         }
         const { y  } = target.getBBox();
         const { left, top  } = target.getBoundingClientRect();
-        params.dontPositionTooltip ? null : toolip.style.transform = `translate(${left - selfWidth / 2}px, ${top}px)`;
+        params.dontPositionTooltip ? null : toolip.style.transform = `translate(${left - selfWidth / 2}px, ${top - selfHeight / 1.5}px)`;
 
         infoItems.forEach(el => {
             el.textContent  = target.dataset[el.dataset.infoFlat]
