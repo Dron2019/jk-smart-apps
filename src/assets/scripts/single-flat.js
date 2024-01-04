@@ -1,6 +1,7 @@
 import 'current-device';
 import { useState } from './modules/helpers/helpers';
 import Popup from './modules/popup/PopupView';
+import './modules/form';
 
 import './modules/jumpToSiteForm';
 

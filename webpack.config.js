@@ -11,20 +11,20 @@ const config = {
   output: {
     filename: '[name].bundle.js',
   },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks(chunk) {
-            // exclude `my-excluded-chunk`
-            return chunk.name !== 'immediate-loading';
-          },
-        },
-      },
-    },
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     cacheGroups: {
+  //       commons: {
+  //         test: /[\\/]node_modules[\\/]/,
+  //         name: 'vendors',
+  //         chunks(chunk) {
+  //           // exclude `my-excluded-chunk`
+  //           return chunk.name !== 'immediate-loading';
+  //         },
+  //       },
+  //     },
+  //   },
+  // },
   plugins: [
 
     new webpack.ProvidePlugin({
